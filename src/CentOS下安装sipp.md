@@ -40,15 +40,28 @@ excerpt: 在CentOS7的系统中配置安装sipp，并运行测试
 
 4.下载libpcap包并编译安装
 
-　　wget -c http://www.tcpdump.org/release/libpcap-1.5.3.tar.gz
+　　wget -c http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz
   
-　　tar -xzvf libpcap-1.5.3.tar.gz
+　　tar -xzvf libpcap-1.9.0.tar.gz
   
-　　cd libpcap-1.5.3/
+　　cd libpcap-1.9.0/
   
 　　./configure
   
 　　make
   
 　　make install
-  
+
+5.编译安装sipp
+
+cd /home/sipp-3.5.2/
+
+./configure --with-pcap --with-openssl
+
+make
+
+make install
+
+完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。
+
+6.将所有sipp脚本所在的xml文件夹和pcap文件夹，使用SecurityFX上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。
