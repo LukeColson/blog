@@ -18,10 +18,10 @@ excerpt: 在CentOS7的系统中配置安装sipp，并运行测试
 
   cd /home
   
-  # 安装wget
+  安装wget
   yum -y install wget
   
-  # 下载sipp
+  下载sipp
   wget https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz
 
 
