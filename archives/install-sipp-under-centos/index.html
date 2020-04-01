@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/5d1b0067aa5df9c7d08ad1ae6239a51f.json"
+            api: "https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/63efa75eb08e53397cf42234035207dd.json"
         }
     </script>
     
@@ -81,31 +81,31 @@
             </span>
             <div class="ga-content_body">
                 <p>1.CentOS安装完成后，设置静态IP或者DHCP动态获取IP地址。</p>
-<p>　　cd /home</p>
-<p>　　yum -y install wget</p>
-<p>　　wget <a href="https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz">https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz</a></p>
+<p>cd /home</p>
+<p>yum -y install wget</p>
+<p>wget <a href="https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz">https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz</a></p>
 <p>2.解压sipp-3.5.2.tar.gz</p>
-<p>　　tar -xzvf sipp-3.5.2.tar.gz</p>
+<p>tar -xzvf sipp-3.5.2.tar.gz</p>
 <p>3.安装依赖文件</p>
-<p>　　yum -y install gcc-c++</p>
-<p>　　yum -y install ncurses-devel</p>
-<p>　　yum -y install openssl-devel</p>
-<p>　　yum -y install flex</p>
-<p>　　yum -y install bison</p>
+<p>yum -y install gcc-c++</p>
+<p>yum -y install ncurses-devel</p>
+<p>yum -y install openssl-devel</p>
+<p>yum -y install flex</p>
+<p>yum -y install bison</p>
 <p>4.下载libpcap包并编译安装</p>
-<p>　　wget -c <a href="http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz">http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz</a></p>
-<p>　　tar -xzvf libpcap-1.9.0.tar.gz</p>
-<p>　　cd libpcap-1.9.0/</p>
-<p>　　./configure</p>
-<p>　　make</p>
-<p>　　make install</p>
+<p>wget -c <a href="http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz">http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz</a></p>
+<p>tar -xzvf libpcap-1.9.0.tar.gz</p>
+<p>cd libpcap-1.9.0/</p>
+<p>./configure</p>
+<p>make</p>
+<p>make install</p>
 <p>5.编译安装sipp</p>
 <p>cd /home/sipp-3.5.2/</p>
 <p>./configure --with-pcap --with-openssl</p>
 <p>make</p>
 <p>make install</p>
 <p>完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。</p>
-<p>6.将所有sipp脚本所在的xml文件夹和pcap文件夹，使用SecurityFX上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。</p>
+<p>6.将所有sipp脚本所在的xml文件夹和pcap文件夹上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。</p>
 
             </div>
         </article>
