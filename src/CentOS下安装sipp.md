@@ -14,7 +14,17 @@ tags:
 excerpt: 在CentOS7的系统中配置安装sipp，并运行测试
 ---
 
-1.配置完系统的网络属性后，已经能够通过实体机的连接工具，如SecurityCRT和SecurityFx进行命令行登陆和文件传输了，我们将sipp-3.4.1.tar.gz上传至虚拟机环境，为便于操作，建议上传至  home目录下；
+1.CentOS安装完成后，设置静态IP或者DHCP动态获取IP地址。
+
+  cd /home
+  
+  # 安装wget
+  yum -y install wget
+  
+  # 下载sipp
+  wget https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz
 
 
-2.使用SecurityCRT或ssh Client工具命令行登陆虚拟机，进入/home目录，通过ls能够查看到新上传的文件，使用 tar -xzvf sipp-3.5.1.tar.gz进行解压。完成后ls，发现已经解压出该文件夹。
+2.解压sipp-3.5.2.tar.gz
+
+  tar -xzvf sipp-3.5.2.tar.gz
