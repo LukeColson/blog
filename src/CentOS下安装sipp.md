@@ -25,6 +25,7 @@ excerpt: 在CentOS7的系统中配置安装sipp，并运行测试
   wget https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz
 
 
+
 2.解压sipp-3.5.2.tar.gz
 
   tar -xzvf sipp-3.5.2.tar.gz
