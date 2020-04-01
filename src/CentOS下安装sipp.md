@@ -4,7 +4,7 @@ title: CentOS下安装sipp
 slug: install-sipp-under-centos
 date: 2020-04-01 10:20
 status: publish
-author: 熊猫小A
+author: 痒痒鼠
 categories: 
   - 默认分类
 tags: 
