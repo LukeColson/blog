@@ -74,6 +74,8 @@ make install
 
 /usr/lib64/路径下缺少库libpcap.so.1
 
+解决方法：
+
 cp /usr/local/lib/libpcap.so.1 /usr/lib64/libpcap.so.1 
 
 
