@@ -16,41 +16,41 @@ excerpt: 在CentOS7的系统中配置安装sipp，并运行测试
 
 1.CentOS安装完成后，设置静态IP或者DHCP动态获取IP地址。
 
-　　cd /home
+cd /home
   
-　　yum -y install wget
+yum -y install wget
   
-　　wget https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz
+wget https://github.com/SIPp/sipp/releases/download/v3.5.2/sipp-3.5.2.tar.gz
 
 2.解压sipp-3.5.2.tar.gz
 
-　　tar -xzvf sipp-3.5.2.tar.gz
+tar -xzvf sipp-3.5.2.tar.gz
 
 3.安装依赖文件
 
-　　yum -y install gcc-c++
+yum -y install gcc-c++
   
-　　yum -y install ncurses-devel
+yum -y install ncurses-devel
   
-　　yum -y install openssl-devel
+yum -y install openssl-devel
   
-　　yum -y install flex
+yum -y install flex
   
-　　yum -y install bison
+yum -y install bison
 
 4.下载libpcap包并编译安装
 
-　　wget -c http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz
+wget -c http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz
   
-　　tar -xzvf libpcap-1.9.0.tar.gz
+tar -xzvf libpcap-1.9.0.tar.gz
   
-　　cd libpcap-1.9.0/
+cd libpcap-1.9.0/
   
-　　./configure
+./configure
   
-　　make
+make
   
-　　make install
+make install
 
 5.编译安装sipp
 
@@ -64,4 +64,4 @@ make install
 
 完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。
 
-6.将所有sipp脚本所在的xml文件夹和pcap文件夹，使用SecurityFX上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。
+6.将所有sipp脚本所在的xml文件夹和pcap文件夹上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。
