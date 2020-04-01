@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/d842d6fc5220b7865e78f1cfbe76d940.json"
+            api: "https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/5d1b0067aa5df9c7d08ad1ae6239a51f.json"
         }
     </script>
     
@@ -93,12 +93,19 @@
 <p>　　yum -y install flex</p>
 <p>　　yum -y install bison</p>
 <p>4.下载libpcap包并编译安装</p>
-<p>　　wget -c <a href="http://www.tcpdump.org/release/libpcap-1.5.3.tar.gz">http://www.tcpdump.org/release/libpcap-1.5.3.tar.gz</a></p>
-<p>　　tar -xzvf libpcap-1.5.3.tar.gz</p>
-<p>　　cd libpcap-1.5.3/</p>
+<p>　　wget -c <a href="http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz">http://www.tcpdump.org/release/libpcap-1.9.0.tar.gz</a></p>
+<p>　　tar -xzvf libpcap-1.9.0.tar.gz</p>
+<p>　　cd libpcap-1.9.0/</p>
 <p>　　./configure</p>
 <p>　　make</p>
 <p>　　make install</p>
+<p>5.编译安装sipp</p>
+<p>cd /home/sipp-3.5.2/</p>
+<p>./configure --with-pcap --with-openssl</p>
+<p>make</p>
+<p>make install</p>
+<p>完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。</p>
+<p>6.将所有sipp脚本所在的xml文件夹和pcap文件夹，使用SecurityFX上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。</p>
 
             </div>
         </article>
