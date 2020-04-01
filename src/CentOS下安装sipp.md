@@ -65,3 +65,15 @@ make install
 完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。
 
 6.将所有sipp脚本所在的xml文件夹和pcap文件夹上传至/home/sipp-3.5.2,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。
+
+常见错误：
+
+1.sipp: error while loading shared libraries: libpcap.so.1: cannot open shared object file: No such file or directory
+
+原因：
+
+/usr/lib64/路径下缺少库libpcap.so.1
+
+cp /usr/local/lib/libpcap.so.1 /usr/lib64/libpcap.so.1 
+
+
