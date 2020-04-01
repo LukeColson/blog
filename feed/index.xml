@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>我的个人博客</title><link>/blog/</link><description>萌新的囤囤鼠之路</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/logo.png</url><title>我的个人博客</title><link>/blog/</link></image><language>zh-CN</language><lastBuildDate>Wed, 01 Apr 2020 02:30:08 +0806</lastBuildDate><pubDate>Wed, 01 Apr 2020 02:30:08 +0806</pubDate><item><title>我的第一篇文章</title><link>/blog/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>我的个人博客</title><link>/blog/</link><description>萌新的囤囤鼠之路</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/logo.png</url><title>我的个人博客</title><link>/blog/</link></image><language>zh-CN</language><lastBuildDate>Wed, 01 Apr 2020 02:30:32 +0806</lastBuildDate><pubDate>Wed, 01 Apr 2020 02:30:32 +0806</pubDate><item><title>我的第一篇文章</title><link>/blog/archives/my-first-awesome-post/</link><description>&lt;p&gt;这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！
 这是我的第一篇文章。文章使用 GitHub 管理，并通过 GitHub Actions 自动构建与发布！&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 92.88888888888889" &gt;&lt;img width="836" height="450" src="https://cdn.jsdelivr.net/gh/lukecolson/blog@gh-pages/archives/assets/e0affbc80ccb2d596c87b520e37e7071.jpg" /&gt;&lt;figcaption&gt;幽灵公主剧照&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
 </description><author>just_for_onmyoji@163.com (熊猫小A)</author><guid isPermaLink="true">/blog/archives/my-first-awesome-post/</guid><pubDate>Tue, 17 Dec 2019 20:34:00 +0806</pubDate></item><item><title>Hello World!</title><link>/blog/archives/typography/</link><description>&lt;div class="notice"&gt;这是一篇示例文章，在这里你可以看到常用页面元素的显示效果，同时也是 Markdown 语法的参考文章。保留或者删除本文，开始自己的创作吧！&lt;/div&gt;&lt;h2&gt;L2 Heading&lt;/h2&gt;
@@ -81,4 +81,36 @@
 &lt;/table&gt;
 &lt;h2&gt;Link Card&lt;/h2&gt;
 &lt;div class="links"&gt;
-&lt;a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item"&gt;                 &lt;div class="board-thumb"&gt;&lt;img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&amp;r=G&amp;d="&gt;&lt;/div&gt;                 &lt;div class="board-title"&gt;AlanDecode&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;hr&gt;&lt;div class="footnotes"&gt;&lt;ol&gt;&lt;li id="fn_1"&gt;Home page for AlanDecode &lt;a no-style href="#fn_ref_1"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description><author>just_for_onmyoji@163.com (AlanDecode)</author><guid isPermaLink="true">/blog/archives/typography/</guid><pubDate>Wed, 18 Dec 2019 16:50:00 +0806</pubDate></item></channel></rss>
+&lt;a style="display:block" target="_blank" href="https://www.imalan.cn" class="board-item"&gt;                 &lt;div class="board-thumb"&gt;&lt;img src="https://secure.gravatar.com/avatar/1741a6eef5c824899e347e4afcbaa75d?s=200&amp;r=G&amp;d="&gt;&lt;/div&gt;                 &lt;div class="board-title"&gt;AlanDecode&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;hr&gt;&lt;div class="footnotes"&gt;&lt;ol&gt;&lt;li id="fn_1"&gt;Home page for AlanDecode &lt;a no-style href="#fn_ref_1"&gt;↩&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</description><author>just_for_onmyoji@163.com (AlanDecode)</author><guid isPermaLink="true">/blog/archives/typography/</guid><pubDate>Wed, 18 Dec 2019 16:50:00 +0806</pubDate></item><item><title>CentOS下安装sipp</title><link>/blog/archives/install-sipp-under-centos/</link><description>&lt;p&gt;在CentOS7的系统中配置安装sipp，并运行测试。
+1.配置完系统的网络属性后，已经能够通过实体机的连接工具，如SecurityCRT和SecurityFx进行命令行登陆和文件传输了，我们将sipp-3.4.1.tar.gz上传至虚拟机环境，为便于操作，建议上传至  home目录下；&lt;/p&gt;
+&lt;p&gt;2.使用SecurityCRT或ssh Client工具命令行登陆虚拟机，进入/home目录，通过ls能够查看到新上传的文件，使用 tar -xzvf sipp-3.5.1.tar.gz进行解压。完成后ls，发现已经解压出该文件夹。
+  tar -xzvf sipp.svn.tar.gz&lt;/p&gt;
+&lt;p&gt;3.进入sipp-3.4.1目录，按照正常的编译过程，执行./configure命令，发现如下图所示错误。这是由于新的系统下，C++的编译组件和ncurses都没有安装所致，因此接下来我们需要统一进行相关 依赖包的安装。&lt;/p&gt;
+&lt;p&gt;4.在CentOS下，yum命令可以很方便地进行软件包以及其依赖包的下载和安装过程，避免了很多依赖关系的人工干预。
+  yum -y install gcc-c++
+  yum -y install ncurses-devel
+  yum -y install openssl-devel
+  为了安装libpcap，还需要安装以下两个开发包：
+  yum -y install flex
+  yum -y install bison&lt;/p&gt;
+&lt;p&gt;5.下载并安装libpcap开发包。由于需要支持RTP传输，因此还需要使用如下命令进行libpcap包的下载编译安装
+  进入home目录：cd /home
+  yum -y install wget
+  下载libpcap包： wget -c &lt;a href="http://www.tcpdump.org/release/libpcap-1.5.3.tar.gz"&gt;http://www.tcpdump.org/release/libpcap-1.5.3.tar.gz&lt;/a&gt;
+  解压： tar -xzvf libpcap-1.5.3.tar.gz
+  进入解压出的目录： cd libpcap-1.5.3/
+  编译配置：./configure
+  编译： make
+  安装： make install&lt;/p&gt;
+&lt;p&gt;6.安装完毕libpcap后，就可以开始sipp的配置安装了：
+  进入sipp目录： cd /home/sipp-3.5.1/
+  编译配置： ./configure --with-pcap --with-openssl
+  编译： make
+  安装： make install
+  完毕后使用 sipp -v 命令查看编译及安装结果，其中第一行如果包含PCAP-RTPSTREAM即说明支持rtp。&lt;/p&gt;
+&lt;p&gt;7.将所有sipp脚本所在的xml文件夹和pcap文件夹，使用SecurityFX上传至/home/sipp-3.4.1,然后分别启动uas和uac进行包含rtp传输的呼叫流程试验。请注意，先进入sipp-3.4.1目录，再执行以下命令，否则容易出现由于路径问题无法load相关文件的问题。
+  uas侧：
+        sipp -sf xml/call/callee_inner_normal.xml -i 192.168.10.114 -p 5066 -deadcall_wait 0
+  uac侧：
+        sipp -sf xml/call/caller_inner_normal.xml 192.168.10.114:5066 -i 192.168.10.114 -p 5061 -inf xml/user_data/user_num_500.csv -r 1 -rp 1000&lt;/p&gt;
+</description><author>just_for_onmyoji@163.com (痒痒鼠)</author><guid isPermaLink="true">/blog/archives/install-sipp-under-centos/</guid><pubDate>Wed, 01 Apr 2020 10:20:00 +0806</pubDate></item></channel></rss>
